@@ -6,14 +6,14 @@ function App() {
   const [data, setData] = useState(null)
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/posts/6284f0976b9ce62d455bd68a')
+    fetch('http://localhost:5000/api/posts/')
       .then((res) => res.json())
-      .then((res) => setData(res.author))
+      .then((res) => setData(res))
   }, [])
 
   return (
     <div className="file-manager">
-      <p>{!data ? 'Loading...' : data}</p>
+      <p>{!data ? 'Loading...' : `${data[0].author}`}</p>
     </div>
   )
 }
