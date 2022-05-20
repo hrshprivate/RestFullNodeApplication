@@ -19,7 +19,7 @@ app.use('/api', router)
 app.get('/react', (req, res) => {
   res.json([
     {
-      message: 'hello world naxui!',
+      message: 'hello world 123!',
     },
   ])
 })
